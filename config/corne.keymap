@@ -12,6 +12,7 @@
 
 / {
     chosen {
+        zmk, physical_layout = &footstan_corne_5col_layout;
         zmk, matrix-transform = &five_column_transform;
     };
 
