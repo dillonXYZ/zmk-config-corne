@@ -72,10 +72,46 @@
             >;
         };
 
-        extra_1 { status = "reserved"; };
+        extra_1 {             // -----------------------------------------------------------------------------------------
+            // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
+            // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+            // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+            //            | GUI | ESC | SPC |     | ENT |     | TAB |
 
-        extra_2 { status = "reserved"; };
+            display-name = "Raise";
+            bindings = <
+&kp N1     &kp N2     &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8     &kp N9    &kp N0
+&kp MINUS  &kp EQUAL  &kp LBRC  &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT  &kp RBRC   &kp FSLH  &kp BSLH
+&kp GRAVE  &trans     &trans    &kp COMMA  &kp COLON  &kp SEMI  &kp DOT   &kp LCTRL  &kp RALT  &trans
+                      &kp LGUI  &kp ESC    &kp SPACE  &kp RET   &trans    &kp TAB
+            >;};
 
-        extra_3 { status = "reserved"; };
+        extra_2 {             // -----------------------------------------------------------------------------------------
+            // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
+            // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+            // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+            //            | GUI | ESC | SPC |     | ENT |     | TAB |
+
+            display-name = "Raise";
+            bindings = <
+&kp N1     &kp N2     &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8     &kp N9    &kp N0
+&kp MINUS  &kp EQUAL  &kp LBRC  &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT  &kp RBRC   &kp FSLH  &kp BSLH
+&kp GRAVE  &trans     &trans    &kp COMMA  &kp COLON  &kp SEMI  &kp DOT   &kp LCTRL  &kp RALT  &trans
+                      &kp LGUI  &kp ESC    &kp SPACE  &kp RET   &trans    &kp TAB
+            >; };
+
+        extra_3 {             // -----------------------------------------------------------------------------------------
+            // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
+            // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+            // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+            //            | GUI | ESC | SPC |     | ENT |     | TAB |
+
+            display-name = "Raise";
+            bindings = <
+&kp N1     &kp N2     &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8     &kp N9    &kp N0
+&kp MINUS  &kp EQUAL  &kp LBRC  &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT  &kp RBRC   &kp FSLH  &kp BSLH
+&kp GRAVE  &trans     &trans    &kp COMMA  &kp COLON  &kp SEMI  &kp DOT   &kp LCTRL  &kp RALT  &trans
+                      &kp LGUI  &kp ESC    &kp SPACE  &kp RET   &trans    &kp TAB
+            >; };
     };
 };
