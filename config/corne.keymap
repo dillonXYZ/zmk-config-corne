@@ -24,16 +24,10 @@
     combos {
         compatible = "zmk,combos";
 
-        SwitchKBLO {
+        Toggle_KBL {
             bindings = <&tog 5>;
             key-positions = <32 33>;
             layers = <0>;
-        };
-
-        Canary {
-            bindings = <&tog 0>;
-            key-positions = <31 34>;
-            layers = <5>;
         };
     };
 
@@ -118,7 +112,7 @@
             >;
         };
 
-        layer_5 {
+        QWERTY {
             display-name = "QWERTY ";
             bindings = <
 &kp Q           &kp W           &kp E               &kp R             &kp T      &kp Y    &kp U              &kp I                &kp O            &kp P
