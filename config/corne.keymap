@@ -41,11 +41,11 @@
             // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
             //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
 
-            display-name = "CANARY :)";
+            display-name = "CANARY :3";
             bindings = <
 &kp W           &kp L           &kp Y               &kp P             &kp B      &kp Z    &kp F              &kp O                &kp U            &as LS(APOSTROPHE) APOSTROPHE
 &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G      &kp M    &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RIGHT_GUI A
-&kp Q           &kp J           &kp V               &kp D             &kp K      &kp X    &kp H              &kp COMMA            &kp PERIOD       &kp SINGLE_QUOTE
+&kp Q           &kp J           &kp V               &kp D             &kp K      &kp X    &kp H              &kp COMMA            &kp PERIOD       &lt 4 QUESTION
                                 &lt 3 ESC           &mo 1             &kp SPACE  &kp RET  &kp BACKSPACE      &mo 2
             >;
         };
@@ -57,7 +57,7 @@
             // | BTCLR |     |     |     |     |     |     |     |     |     |     |
             //               | GUI |     | SPC |     | ENT | ESC | TAB |
 
-            display-name = "Nums & Parentheses";
+            display-name = "{[(123])}";
             bindings = <
 &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS   &kp N7        &kp N8         &kp N9        &kp ASTERISK
 &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE        &kp MINUS  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp SLASH
@@ -66,29 +66,29 @@
             >;
         };
 
-        raise_layer {
+        Symbol_Layer {
             // -----------------------------------------------------------------------------------------
             // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
             // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
             // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
             //            | GUI | ESC | SPC |     | ENT |     | TAB |
 
-            display-name = "Raise";
+            display-name = "Symbologies";
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8     &kp N9    &kp N0
-&kp MINUS  &kp EQUAL  &kp LBRC  &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT  &kp RBRC   &kp FSLH  &kp BSLH
-&kp GRAVE  &trans     &trans    &kp COMMA  &kp COLON  &kp SEMI  &kp DOT   &kp LCTRL  &kp RALT  &trans
-                      &kp LGUI  &kp ESC    &kp SPACE  &kp RET   &trans    &kp TAB
+&trans     &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans     &trans   &trans        &trans   &trans  &trans
+&trans     &kp DOLLAR       &kp PERCENT   &kp CARET  &trans     &trans   &kp QUESTION  &trans   &trans  &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans     &trans   &trans        &trans   &trans  &trans
+                            &kp LGUI      &kp ESC    &kp SPACE  &kp RET  &trans        &kp TAB
             >;
         };
 
-        extra_1 {
+        Navigation_Layer {
             // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
             // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
             // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
             //            | GUI | ESC | SPC |     | ENT |     | TAB |
 
-            display-name = "Raise";
+            display-name = "To Infinity…";
             bindings = <
 &kp N1     &kp N2     &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8     &kp N9    &kp N0
 &kp MINUS  &kp EQUAL  &kp LBRC  &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT  &kp RBRC   &kp FSLH  &kp BSLH
