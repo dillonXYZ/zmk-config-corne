@@ -21,15 +21,16 @@
             bindings = <&kp>, <&kp>;
         };
 
-        new_behavior: new_behavior {
+        home_row_mods: home_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
+            label = "HOME_ROW_MODS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -37,34 +38,27 @@
         compatible = "zmk,combos";
 
         Toggle_KBL {
-            bindings = <&to 5>;
+            bindings = <&to 0>;
             key-positions = <32 33>;
-            layers = <0>;
         };
 
         Back_2_Canary {
             bindings = <&to 0>;
             key-positions = <32 33>;
-            layers = <5>;
+            layers = <0>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Default_KB-CANARY {
-            // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-            // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
-            // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
-            //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
-
-            display-name = "Canary :3";
+        QWERTY {
+            display-name = "qwerty";
             bindings = <
-&kp W                     &kp L                     &kp Y                         &kp P                       &kp B         &kp Z    &kp F                        &kp O                          &kp U                      &as LS(APOSTROPHE) APOSTROPHE
-&new_behavior LEFT_GUI C  &new_behavior LEFT_ALT R  &new_behavior LEFT_CONTROL S  &new_behavior LEFT_SHIFT T  &kp G         &kp M    &new_behavior RIGHT_SHIFT N  &new_behavior RIGHT_CONTROL E  &new_behavior RIGHT_ALT I  &new_behavior RIGHT_GUI A
-&kp Q                     &kp J                     &kp V                         &kp D                       &kp K         &kp X    &kp H                        &kp COMMA                      &kp PERIOD                 &lt 4 QUESTION
-                                                    &lt 1 TAB                     &kp SPACE                   &lt 3 ESCAPE  &kp RET  &kp BACKSPACE                &lt 2 DELETE
+&kp Q                      &kp W                      &kp E                          &kp R                        &kp T      &kp Y      &kp U                         &kp I                           &kp O                       &kp P
+&home_row_mods LEFT_GUI A  &home_row_mods LEFT_ALT S  &home_row_mods LEFT_CONTROL D  &home_row_mods LEFT_SHIFT F  &kp G      &kp H      &home_row_mods RIGHT_SHIFT J  &home_row_mods RIGHT_CONTROL K  &home_row_mods RIGHT_ALT L  &as LS(SEMICOLON) SEMICOLON
+&kp Z                      &kp X                      &kp C                          &kp V                        &kp B      &kp N      &kp M                         &kp COMMA                       &kp PERIOD                  &lt 4 QUESTION
+                                                      &lt 1 ESCAPE                   &kp SPACE                    &lt 3 DEL  &kp ENTER  &kp BACKSPACE                 &lt 2 TAB
             >;
         };
 
@@ -80,7 +74,7 @@
 &trans         &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS   &kp N7        &kp N8         &kp N9        &kp ASTERISK
 &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE        &kp MINUS  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp SLASH
 &trans         &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH   &kp N0     &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp EQUAL
-                                 &trans                &trans                 &kp SPACE       &kp RET    &kp SPACE     &kp BACKSPACE
+                                 &trans                &trans                 &trans          &kp ENTER  &kp SPACE     &kp BACKSPACE
             >;
         };
 
@@ -93,10 +87,10 @@
 
             display-name = "Symbologies";
             bindings = <
-&trans        &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &kp SINGLE_QUOTE       &kp C_PLAY_PAUSE  &kp C_REWIND       &kp C_FAST_FORWARD  &trans  &trans
-&kp QUESTION  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp LS(DOUBLE_QUOTES)  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOL_UP        &trans  &trans
-&kp TILDE     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans                 &trans            &trans             &trans              &trans  &trans
-                               &kp LGUI      &kp ESC    &kp SPACE              &kp RET           &trans             &kp TAB
+&trans        &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &kp COLON  &kp C_PLAY_PAUSE  &kp C_REWIND       &kp C_FAST_FORWARD  &trans  &trans
+&kp QUESTION  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp SEMI   &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOL_UP        &trans  &trans
+&kp TILDE     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &trans     &trans            &trans             &trans              &trans  &trans
+                               &trans        &trans     &trans     &kp RET           &trans             &kp TAB
             >;
         };
 
@@ -108,10 +102,10 @@
 
             display-name = "Go go go";
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &kp CAPSLOCK
-&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans     &trans     &trans     &trans     &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &kp END
-                   &kp LGUI   &trans     &kp SPACE  &kp RET         &trans          &kp TAB
+&trans  &trans     &trans     &trans     &trans  &kp LC(Z)       &kp LC(LS(Z))   &trans        &trans           &kp CAPSLOCK
+&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans     &trans     &trans     &trans  &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &kp END
+                   &trans     &trans     &trans  &kp RET         &trans          &kp TAB
             >;
         };
 
@@ -123,20 +117,26 @@
 
             display-name = "fnum();";
             bindings = <
-&kp F9  &kp F10  &kp F11   &kp F12  &kp PRINTSCREEN  &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans
-&kp F5  &kp F6   &kp F7    &kp F8   &kp SCROLLLOCK   &bt BT_SEL 0    &bt BT_NXT    &bt BT_PRV    &trans        &trans
-&kp F1  &kp F2   &kp F3    &kp F4   &kp PAUSE_BREAK  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-                 &kp LGUI  &kp ESC  &kp SPACE        &kp RET         &trans        &kp TAB
+&kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN  &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &bt BT_SEL 0    &bt BT_NXT    &bt BT_PRV    &trans        &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+                 &trans   &trans   &trans           &trans          &trans        &trans
             >;
         };
 
-        QWERTY {
-            display-name = "qwerty";
+        Default_KB-CANARY {
+            // -----------------------------------------------------------------------------------------
+            // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
+            // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
+            // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
+            //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+
+            display-name = "Canary :3";
             bindings = <
-&kp Q                     &kp W                     &kp E                         &kp R                       &kp T      &kp Y    &kp U                        &kp I                          &kp O                      &kp P
-&new_behavior LEFT_GUI A  &new_behavior LEFT_ALT S  &new_behavior LEFT_CONTROL D  &new_behavior LEFT_SHIFT F  &kp G      &kp H    &new_behavior RIGHT_SHIFT J  &new_behavior RIGHT_CONTROL K  &new_behavior RIGHT_ALT L  &as LS(SEMICOLON) SEMICOLON
-&kp Z                     &kp X                     &kp C                         &kp V                       &kp B      &kp N    &kp M                        &kp COMMA                      &kp PERIOD                 &as LS(SINGLE_QUOTE) SINGLE_QUOTE
-                                                    &kp LEFT_SHIFT                &lt 3 ESCAPE                &kp SPACE  &kp RET  &kp BACKSPACE                &kp RCTRL
+&kp W                      &kp L                      &kp Y                          &kp P                        &kp B         &kp Z    &kp F                         &kp O                           &kp U                       &as LS(APOSTROPHE) APOSTROPHE
+&home_row_mods LEFT_GUI C  &home_row_mods LEFT_ALT R  &home_row_mods LEFT_CONTROL S  &home_row_mods LEFT_SHIFT T  &kp G         &kp M    &home_row_mods RIGHT_SHIFT N  &home_row_mods RIGHT_CONTROL E  &home_row_mods RIGHT_ALT I  &home_row_mods RIGHT_GUI A
+&kp Q                      &kp J                      &kp V                          &kp D                        &kp K         &kp X    &kp H                         &kp COMMA                       &kp PERIOD                  &lt 4 QUESTION
+                                                      &lt 1 TAB                      &kp SPACE                    &lt 3 ESCAPE  &kp RET  &kp BACKSPACE                 &lt 2 DELETE
             >;
         };
     };
