@@ -42,10 +42,10 @@
         GRAPHITE {
             display-name = "Graphite";
             bindings = <
-&kp B                      &kp L                      &kp D                          &kp W                        &kp Z        &kp APOS   &kp F                         &kp O                           &kp U                       &kp J
-&home_row_mods LEFT_GUI N  &home_row_mods LEFT_ALT R  &home_row_mods LEFT_CONTROL T  &home_row_mods LEFT_SHIFT S  &kp G        &kp Y      &home_row_mods RIGHT_SHIFT H  &home_row_mods RIGHT_CONTROL A  &home_row_mods RIGHT_ALT E  &kp I
-&kp Q                      &kp X                      &kp M                          &kp C                        &kp V        &kp K      &kp P                         &kp COMMA                       &kp PERIOD                  &lt 4 SLASH
-                                                      &lt 1 TAB                      &lt 3 ESCAPE                 &lt 5 SPACE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
+&kp B                      &kp L                      &kp D                          &kp W                        &kp Z         &kp APOS   &kp F                         &kp O                           &kp U                       &kp J
+&home_row_mods LEFT_GUI N  &home_row_mods LEFT_ALT R  &home_row_mods LEFT_CONTROL T  &home_row_mods LEFT_SHIFT S  &kp G         &kp Y      &home_row_mods RIGHT_SHIFT H  &home_row_mods RIGHT_CONTROL A  &home_row_mods RIGHT_ALT E  &kp I
+&kp Q                      &kp X                      &kp M                          &kp C                        &kp V         &kp K      &kp P                         &kp COMMA                       &kp PERIOD                  &lt 4 SLASH
+                                                      &lt 1 TAB                      &lt 3 SPACE                  &lt 5 ESCAPE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
             >;
         };
 
