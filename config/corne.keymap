@@ -41,7 +41,6 @@
             bindings = <&kp RC(N)>;
             key-positions = <17 10>;
             require-prior-idle-ms = <150>;
-            slow-release;
             layers = <0>;
         };
     };
