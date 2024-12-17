@@ -40,7 +40,8 @@
         C_n {
             bindings = <&sk RC(N)>;
             key-positions = <17 10>;
-            timeout-ms = <150>;
+            timeout-ms = <170>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
     };
