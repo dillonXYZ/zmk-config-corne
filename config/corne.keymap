@@ -38,7 +38,7 @@
         compatible = "zmk,combos";
 
         C_n {
-            bindings = <&sk RC(n)>;
+            bindings = <&sk RC(N)>;
             key-positions = <17 10>;
             timeout-ms = <225>;
             require-prior-idle-ms = <150>;
