@@ -43,9 +43,9 @@
             display-name = "Graphite";
             bindings = <
 &kp B                      &kp L                      &kp D                          &kp W                        &kp Z         &kp APOS   &kp F                         &kp O      &kp U                       &kp J
-&home_row_mods LEFT_GUI N  &home_row_mods LEFT_ALT R  &home_row_mods LEFT_CONTROL T  &home_row_mods LEFT_SHIFT S  &kp G         &kp Y      &home_row_mods RIGHT_SHIFT H  &lt 6 A    &home_row_mods RIGHT_ALT E  &home_row_mods RIGHT_GUI I
+&home_row_mods LEFT_GUI N  &home_row_mods LEFT_ALT R  &home_row_mods LEFT_CONTROL T  &home_row_mods LEFT_SHIFT S  &kp G         &kp Y      &home_row_mods RIGHT_SHIFT H  &lt 5 A    &home_row_mods RIGHT_ALT E  &home_row_mods RIGHT_GUI I
 &kp Q                      &kp X                      &kp M                          &kp C                        &kp V         &kp K      &kp P                         &kp COMMA  &kp PERIOD                  &lt 4 SLASH
-                                                      &lt 1 TAB                      &lt 3 SPACE                  &lt 5 ESCAPE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
+                                                      &lt 1 TAB                      &kp SPACE                    &lt 3 ESCAPE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
             >;
         };
 
@@ -111,24 +111,13 @@
             >;
         };
 
-        quick_prog_syms {
-            bindings = <
-&trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &trans           &trans       &trans
-&trans  &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON      &kp EXCLAMATION  &kp PERCENT  &kp EQUAL
-&trans  &trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans         &trans           &trans       &trans
-                &trans  &trans  &trans                &trans                 &trans         &trans
-            >;
-
-            label = "L33t";
-        };
-
         rCTRL {
             display-name = "rCTRL";
             bindings = <
 &kp RC(B)  &kp RC(L)  &kp RC(D)  &kp RC(W)    &kp RC(Z)     &kp APOS   &kp RC(F)                     &kp RC(O)                       &kp RC(U)   &kp RC(J)
 &kp RC(N)  &kp RC(R)  &kp RC(T)  &kp RC(S)    &kp RC(G)     &kp RC(Y)  &home_row_mods RIGHT_SHIFT H  &home_row_mods RIGHT_CONTROL A  &kp RC(E)   &kp RC(I)
 &kp RC(Q)  &kp RC(X)  &kp RC(M)  &kp RC(C)    &kp RC(V)     &kp RC(K)  &kp RC(P)                     &kp COMMA                       &kp PERIOD  &lt 4 SLASH
-                      &lt 1 TAB  &lt 3 SPACE  &lt 5 ESCAPE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
+                      &lt 1 TAB  &lt 3 SPACE  &lt 0 ESCAPE  &kp ENTER  &kp BACKSPACE                 &lt 2 DEL
             >;
         };
     };
