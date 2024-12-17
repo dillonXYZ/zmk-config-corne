@@ -37,13 +37,13 @@
     combos {
         compatible = "zmk,combos";
 
-        C-n {
-            bindings = <&kp RC(N)>;
-            key-positions = <17 10>;
-            require-prior-idle-ms = <150>;
-            slow-release;
+        cn {
+            bindings = <&sk RC(N)>;
+            key-positions = <10 17>;
             layers = <0>;
+            require-prior-idle-ms = <250>;
             timeout-ms = <170>;
+            slow-release;
         };
     };
 
